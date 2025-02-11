@@ -1,0 +1,6 @@
+Package: kaze-icon-theme
+Version: 1.0
+Architecture: all
+Maintainer: Seu Nome <seu.email@example.com>
+Description: Tema de ícones Kaze para KDE
+ Este pacote contém os temas de ícones Kaze Light e Kaze Dark para o KDE.

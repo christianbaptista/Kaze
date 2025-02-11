@@ -22,5 +22,5 @@ cp -r Kaze-Dark %{buildroot}/usr/share/icons/
 /usr/share/icons/Kaze-Dark
 
 %changelog
-* Tue Feb 11 2025 NAME_YOUR <NAME_YOUR@DOMAIN.com> - 1.1.2
+* Tue Feb 11 2025 NAME_YOUR <NAME_YOUR@DOMAIN.com> - 1.1.5
 - Versão inicial do tema de ícones Kaze.

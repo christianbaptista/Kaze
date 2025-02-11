@@ -6,7 +6,8 @@ NAME=kaze-icon-theme
 SPEC_FILE=SPECS/$NAME.spec
 
 # Cria diretórios necessários
-mkdir -p {BUILD,RPMS,SOURCES,SPECS,SRPMS}
+mkdir SOURCES
+mkdir -p BUILD RPMS SOURCES SPECS SRPMS
 
 # Empacota os arquivos fonte
 tar -czvf SOURCES/$NAME-$VERSION.tar.gz Kaze-light Kaze-Dark

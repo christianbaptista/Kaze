@@ -9,12 +9,12 @@ mkdir -p $BASE_DIR/usr/share/icons/Kaze-light
 mkdir -p $BASE_DIR/usr/share/icons/Kaze-Dark
 
 # Movendo os ícones para os locais corretos
-cp -r $BASE_DIR/Kaze-light $BASE_DIR/usr/share/icons/Kaze-light
-cp -r $BASE_DIR/Kaze-Dark $BASE_DIR/usr/share/icons/Kaze-Dark
+cp -r Kaze-light $BASE_DIR/usr/share/icons/Kaze-light
+cp -r Kaze-Dark $BASE_DIR/usr/share/icons/Kaze-Dark
 
 # Removendo diretórios antigos
-rm -rf $BASE_DIR/Kaze-light
-rm -rf $BASE_DIR/Kaze-Dark
+# rm -rf Kaze-light
+# rm -rf Kaze-Dark
 
 # Criando o arquivo DEBIAN/control
 cat <<EOL > $BASE_DIR/DEBIAN/control
