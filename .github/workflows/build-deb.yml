@@ -1,0 +1,38 @@
+name: Build Debian Package
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up deb structure
+      run: |
+        chmod +x script/setup-deb-structure.sh
+        ./script/setup-deb-structure.sh
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y debhelper devscripts
+
+    - name: Build Debian package
+      run: |
+        mkdir -p dist
+        dpkg-deb --build Kaze dist/kaze-icon-theme_1.0_all.deb
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: kaze-icon-theme
+        path: dist/
