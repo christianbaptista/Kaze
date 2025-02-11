@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up deb structure
       run: |
@@ -32,7 +32,7 @@ jobs:
         dpkg-deb --build Kaze dist/kaze-icon-theme_1.0_all.deb
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: kaze-icon-theme
         path: dist/
