@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configurações
-VERSION=1.1.9
+VERSION=1.1.10
 NAME=kaze-icon-theme
 SPEC_FILE=SPECS/$NAME.spec
 

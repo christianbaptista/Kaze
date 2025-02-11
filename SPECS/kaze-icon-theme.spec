@@ -1,5 +1,5 @@
 Name: kaze-icon-theme
-Version: 1.1.9
+Version: 1.1.10
 Release: 1
 Summary: Tema de ícones Kaze para KDE
 License: BSD-3-clause
@@ -22,5 +22,5 @@ cp -r Kaze-dark %{buildroot}/usr/share/icons/
 /usr/share/icons/Kaze-dark
 
 %changelog
-* Tue Feb 11 2025 NAME_YOUR <NAME_YOUR@DOMAIN.com> - 1.1.9
+* Tue Feb 11 2025 NAME_YOUR <NAME_YOUR@DOMAIN.com> - 1.1.10
 - Versão inicial do tema de ícones Kaze.
