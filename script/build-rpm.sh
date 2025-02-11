@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Configurações
 VERSION=1.1.4
