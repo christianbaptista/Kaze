@@ -15,8 +15,8 @@ jobs:
 
     - name: Set up deb structure
       run: |
-        chmod +x setup-deb-structure.sh
-        ./setup-deb-structure.sh
+        chmod +x script/setup-deb-structure.sh
+        ./script/setup-deb-structure.sh
 
     - name: Install dependencies
       run: |
@@ -30,7 +30,7 @@ jobs:
 
     - name: Create Release
       id: create_release
-      uses: actions/create-release@v2
+      uses: actions/create-release@v4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -40,7 +40,7 @@ jobs:
         prerelease: false
 
     - name: Upload Debian Package to Release
-      uses: actions/upload-release-asset@v2
+      uses: actions/upload-release-asset@v4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
