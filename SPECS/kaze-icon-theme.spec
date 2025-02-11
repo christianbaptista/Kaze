@@ -15,7 +15,7 @@ Este pacote contém os temas de ícones Kaze Light e Kaze Dark para o KDE.
 %install
 mkdir -p %{buildroot}/usr/share/icons
 cp -r Kaze-light %{buildroot}/usr/share/icons/
-cp -r Kaze-Dark %{buildroot}/usr/share/icons/
+cp -r Kaze-dark %{buildroot}/usr/share/icons/
 
 %files
 /usr/share/icons/Kaze-light

@@ -10,7 +10,7 @@ mkdir -p $BASE_DIR/usr/share/icons/Kaze-Dark
 
 # Movendo os ícones para os locais corretos
 cp -r Kaze-light $BASE_DIR/usr/share/icons/Kaze-light
-cp -r Kaze-Dark $BASE_DIR/usr/share/icons/Kaze-Dark
+cp -r Kaze-dark $BASE_DIR/usr/share/icons/Kaze-Dark
 
 # Removendo diretórios antigos
 # rm -rf Kaze-light

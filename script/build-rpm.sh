@@ -10,7 +10,7 @@ mkdir SOURCES
 mkdir -p BUILD RPMS SOURCES SPECS SRPMS
 
 # Empacota os arquivos fonte
-tar -czvf SOURCES/$NAME-$VERSION.tar.gz Kaze-light Kaze-Dark
+tar -czvf SOURCES/$NAME-$VERSION.tar.gz Kaze-light Kaze-dark
 
 # Constrói o pacote RPM
 rpmbuild -ba $SPEC_FILE --define "_topdir $(pwd)"
