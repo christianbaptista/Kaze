@@ -1,12 +1,9 @@
-name: Build Debian Package
+name: Build Debian Package and Create Release
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    tags:
+      - 'v*'  # Dispara o workflow quando uma tag no formato 'vX.X.X' é criada
 
 jobs:
   build:
@@ -29,17 +26,11 @@ jobs:
     - name: Build Debian package
       run: |
         mkdir -p dist
-        dpkg-deb --build Kaze dist/kaze-icon-theme_1.0_all.deb
-
-    - name: Upload artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: kaze-icon-theme
-        path: dist/
+        dpkg-deb --build Kaze dist/kaze-icon-theme_${{ github.ref_name }}_all.deb
 
     - name: Create Release
       id: create_release
-      uses: actions/create-release@v2
+      uses: actions/create-release@v4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -49,7 +40,7 @@ jobs:
         prerelease: false
 
     - name: Upload Debian Package to Release
-      uses: actions/upload-release-asset@v2
+      uses: actions/upload-release-asset@v4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
