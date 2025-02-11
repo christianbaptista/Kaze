@@ -15,8 +15,8 @@ jobs:
 
     - name: Set up deb structure
       run: |
-        chmod +x setup-deb-structure.sh
-        ./setup-deb-structure.sh
+        chmod +x script/setup-deb-structure.sh
+        ./script/setup-deb-structure.sh
 
     - name: Install dependencies
       run: |
